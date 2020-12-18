@@ -118,6 +118,46 @@
           }
         }
       }
+    },
+    "acomi-directives": {
+      "projectType": "library",
+      "root": "projects/acomi-directives",
+      "sourceRoot": "projects/acomi-directives/src",
+      "prefix": "acomi-directive",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/acomi-directives/tsconfig.lib.json",
+            "project": "projects/acomi-directives/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/acomi-directives/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/acomi-directives/src/test.ts",
+            "tsConfig": "projects/acomi-directives/tsconfig.spec.json",
+            "karmaConfig": "projects/acomi-directives/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/acomi-directives/tsconfig.lib.json",
+              "projects/acomi-directives/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "acomici-common-directives"
