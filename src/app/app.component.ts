@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'acomici-common-directives';
+
+  isClickingOutside(isOutside: boolean) {
+
+  }
+
+  whenOutside() {
+
+  }
 }

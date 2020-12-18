@@ -160,5 +160,8 @@
       }
     }
   },
-  "defaultProject": "acomici-common-directives"
+  "defaultProject": "acomici-common-directives",
+  "cli": {
+    "analytics": false
+  }
 }

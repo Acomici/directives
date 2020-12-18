@@ -1,27 +1,50 @@
-# AcomiciCommonDirectives
+# Acomici Common Directives
+
+This repository includes most common Angular directives that are used in all other Acomici repositories. PR and issues are welcomed.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
-## Development server
+## Included Directives
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- [acomiIsOutside](#acomiisoutside): Detect when user click outside the DOM
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### `acomiIsOutside`
 
-## Build
+In your component's module.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```typescript
+@NgModule({
+  imports: [
+    ClickOutsideModule
+  ],
+})
+export class SomeModule {
+}
+```
+And use in HTML component
 
-## Running unit tests
+```angular2html
+<div acomiIsOutside (isOutside)="isClickingOutside($event)" (outside)="whenOutside()">
+  Some DOM
+</div>
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```typescript
+/**
+ * `isOutSide` will be true if user click the DOM or any child DOM 
+ * and false when click outside the dom 
+ * this is useful if you want to detect exactly when user click in or outside the DOM.
+ */
+isClickingOutside(isOutside: boolean) {
+  // ...
+}
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+/**
+ * Use this if you only want to trigger when user click outside the DOM.
+ */
+whenOutside() {
+  // ...
+}
+```

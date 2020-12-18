@@ -1,10 +1,10 @@
-import {NgModule} from '@angular/core';
-import {ClickOutSideDirective} from './click-outside/click-outside.directive';
-
+import { NgModule } from '@angular/core';
+import { ClickOutsideModule } from './click-outside';
 
 @NgModule({
-  declarations: [ClickOutSideDirective],
-  exports: [ClickOutSideDirective]
+  imports: [
+    ClickOutsideModule
+  ],
 })
 export class AcomiDirectivesModule {
 }
