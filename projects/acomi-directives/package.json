@@ -2,7 +2,7 @@
   "name": "@acomici/directives",
   "author": "Acomici",
   "description": "Common Angular directives modules",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": {
     "url": "https://github.com/Acomici/directives.git",
     "type": "git"

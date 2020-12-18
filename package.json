@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "directives-build": "ng build acomi-directives"
+    "directives-build": "ng build acomi-directives --prod",
+    "publish": "cd dist/acomi-directives && npm publish"
   },
   "private": true,
   "dependencies": {
