@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "directives-build": "ng build acomi-directives --prod",
-    "publish": "cd dist/acomi-directives && npm publish"
+    "publish": "cd dist/acomi-directives && npm publish",
+    "build-and-publish": "npm run directives-build && npm run publish"
   },
   "private": true,
   "dependencies": {
