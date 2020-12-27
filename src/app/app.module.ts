@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ClickOutsideModule } from '../../projects/acomi-directives/src/lib/click-outside';
+import { CarouselModule } from '../../projects/acomi-directives/src/lib/carousel';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    CarouselModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}
