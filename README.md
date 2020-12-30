@@ -4,12 +4,14 @@ This repository includes most common Angular directives that are used in all oth
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
 
+---
 ## Included Directives
 
 - [acomiIsOutside](#acomiisoutside): Detect when user click outside the DOM
+- [acomiCarousel](#acomicarousel): Simple carousel effect wrapper.
+- [acomiOverCounted](#acomiovercounted): Simple carousel effect wrapper.
 
 ---
-
 ### `acomiIsOutside`
 
 In your component's module.
@@ -32,9 +34,10 @@ And use in HTML component
 ```
 
 ```typescript
+// your component.ts
 /**
- * `isOutSide` will be true if user click the DOM or any child DOM 
- * and false when click outside the dom 
+ * `isOutSide` will be true if user click outside the DOM.
+ * and false when click inside the DOM (or any child DOM)
  * this is useful if you want to detect exactly when user click in or outside the DOM.
  */
 isClickingOutside(isOutside: boolean) {
@@ -48,3 +51,38 @@ whenOutside() {
   // ...
 }
 ```
+---
+### `acomiCarousel`
+In your component's module.
+
+```typescript
+@NgModule({
+  imports: [
+    CarouselModule
+  ],
+})
+export class SomeModule {
+}
+```
+- Updating...
+
+---
+### `acomiOverCounted`
+
+In your component's module.
+
+```typescript
+@NgModule({
+  imports: [
+    OverCountedModule
+  ],
+})
+export class SomeModule {
+}
+```
+- Updating...
+
+---
+## Future document improvement:
+
+Document for each directive will be constructed as some directive have lots of options ([acomiCarousel](#acomicarousel)).
