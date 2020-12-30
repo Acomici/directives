@@ -9,7 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - [acomiIsOutside](#acomiisoutside): Detect when user click outside the DOM
 - [acomiCarousel](#acomicarousel): Simple carousel effect wrapper.
-- [acomiOverCounted](#acomiovercounted): Simple carousel effect wrapper.
+- [acomiOverCounted](#acomiovercounted): Simple over-counted number effect.
+- [acomiDragNDrop](#acomidragndrop): drag and drop directive listener.
 
 ---
 ### `acomiIsOutside`
