@@ -2,14 +2,15 @@
   "name": "@acomici/directives",
   "author": "Acomici",
   "description": "Common Angular directives modules",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "repository": {
     "url": "https://github.com/Acomici/directives.git",
     "type": "git"
   },
   "peerDependencies": {
     "@angular/common": "^11.0.4",
-    "@angular/core": "^11.0.4"
+    "@angular/core": "^11.0.4",
+    "rxjs": "~6.6.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
