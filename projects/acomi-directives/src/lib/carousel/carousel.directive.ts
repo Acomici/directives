@@ -1,16 +1,7 @@
 import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, Output, Renderer2 } from '@angular/core';
 import { fromEvent, Subject } from 'rxjs';
 import { takeUntil, takeWhile } from 'rxjs/operators';
-
-function htmlUnitToFixed(strUnit: string): number {
-  const regExp = /^-?\d+(\.\d+)?/g;
-  const matching = strUnit.match(regExp);
-  if (matching) {
-    const toParsing = matching[0];
-    return Number.parseFloat(toParsing);
-  }
-  return null;
-}
+import { htmlUnitToFixed } from '@acomici/helpers';
 
 @Directive({
   selector: '[acomiCarousel]',
